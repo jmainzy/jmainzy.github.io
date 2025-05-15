@@ -26,6 +26,11 @@ dependencies:
     sdk: flutter
   url_launcher:
   cupertino_icons: ^1.0.2
+  markdown: ^7.3.0
+  flutter_html: ^3.0.0
+  logger: ^2.5.0
+  xml2json: ^6.2.0
+  http: ^1.4.0
 
 dev_dependencies:
   flutter_test:
