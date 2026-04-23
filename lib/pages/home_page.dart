@@ -115,7 +115,7 @@ class _MyHomePageState extends State<HomePage> {
                                               bottom: Dimens.marginLarge),
                                           child: Text(
                                             "I’m passionate about language revitalization, speech technology, "
-                                            "and great mobile apps.  "
+                                            "and great mobile apps.  ",
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .bodyLarge,
