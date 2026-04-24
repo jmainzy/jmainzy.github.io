@@ -63,7 +63,8 @@ class _MyHomePageState extends State<HomePage> {
                         horizontal: wide
                             ? min(100 + viewportConstraints.maxWidth * .25,
                                 viewportConstraints.maxWidth * .2)
-                            : Dimens.marginLarge),
+                            : Dimens.marginLarge,
+                        vertical: Dimens.marginLarge * 2),
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -132,7 +133,16 @@ class _MyHomePageState extends State<HomePage> {
                                         ElevatedButton(
                                             onPressed: () =>
                                                 {_launchUrl(cvUrl)},
-                                            child: const Text("CV"))
+                                            child: const Text("CV")),
+                                        const SizedBox(
+                                          width: Dimens.marginLarge,
+                                        ),
+                                        ElevatedButton(
+                                            onPressed: () => {
+                                                  _launchUrl(
+                                                      "https://medium.com/@juliamainzinger")
+                                                },
+                                            child: const Text("Blog"))
                                       ])
                                     ])),
                                 wide
@@ -169,6 +179,69 @@ class _MyHomePageState extends State<HomePage> {
                               'Paper':
                                   'https://aclanthology.org/2024.computel-1.2/'
                             },
+                          ),
+                          const SizedBox(
+                            height: Dimens.marginLarge * 2,
+                          ),
+                          Text('Projects',
+                              style: Theme.of(context).textTheme.headlineLarge),
+                          const MarkdownWidget(
+                            data: '''**Hymnal App**   
+                                A cross-platform mobile app built with Flutter. The app includes audio recordings of songs, with lyrics in Mvskoke and English.
+                                ''',
+                            links: {
+                              'View':
+                                  'https://apps.apple.com/us/app/mvskoke-hymnal/id6744351706'
+                            },
+                          ),
+                          const MarkdownWidget(
+                            data: '''**Dictionary Apps**   
+                                I have built several dictionary apps for endangered languages. These apps include search, definition, and audio recordings.
+                                ''',
+                            links: {
+                              'View':
+                                  'https://apps.apple.com/us/app/muscogee-language-dictionary/id6478943862'
+                            },
+                          ),
+                          const MarkdownWidget(
+                            data: '''**Podcast**   
+                                A podcast for Mvskoke language learning using recordings from fluent speakers. For the production of this podcast, I have developed various tools 
+                                for audio editing and speech enhancement.
+                                ''',
+                            links: {
+                              'Listen':
+                                  'https://creators.spotify.com/pod/profile/julia-mainzinger'
+                            },
+                          ),
+                          const MarkdownWidget(
+                            data: '''**Language Technology Research**   
+                                I research technology for Indigenous language revitalization, with the goal of 
+                                designing practical tools alongside the Mvskoke community. Checkout my blog
+                                for the most up-to-date details.
+                                ''',
+                            links: {
+                              'Read More': 'https://medium.com/@juliamainzinger'
+                            },
+                          ),
+                          const SizedBox(
+                            height: Dimens.marginLarge * 2,
+                          ),
+                          Text('Contact',
+                              style: Theme.of(context).textTheme.headlineLarge),
+                          const MarkdownWidget(
+                            data:
+                                '''I am always interested in hearing about new opportunities.  
+                                My research is focused on technology for 
+                                language revitalization. My practical skills include Flutter and 
+                                Android app development, Python, AI model usage and training, 
+                                and more. If you would like to get in touch, please reach out!
+                                ''',
+                            links: {
+                              'Email': 'mailto: juliamainzinger@gmail.com'
+                            },
+                          ),
+                          const SizedBox(
+                            height: Dimens.marginLarge * 2,
                           ),
                         ]))),
           );
